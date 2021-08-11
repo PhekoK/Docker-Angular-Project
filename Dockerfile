@@ -19,4 +19,5 @@ COPY server.js .
 # app binds to port 3000
 EXPOSE 3000
 
-CMD [ "node", 'server.js' ]
+# CMD [ "node", 'server.js' ]
+CMD ng server --host 0.0.0.0
