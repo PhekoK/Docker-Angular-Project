@@ -1,4 +1,5 @@
 # UI 
+# base image
 FROM node:lastest
 
 # Create app directory
@@ -12,7 +13,7 @@ RUN cd Docker-Angular-Project && npm install @angular/cli && npm install
 FROM node:latest
 WORKDIR /root/
 COPY package*.json ./
-RUN npm Install
+RUN npm install
 COPY server.js .
 
 # app binds to port 3000
