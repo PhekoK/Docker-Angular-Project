@@ -1,3 +1,4 @@
+# UI 
 FROM node:lastest
 
 # Create app directory
@@ -6,7 +7,7 @@ WORKDIR /usr/src/app
 COPY . .
 RUN cd Docker-Angular-Project && npm install @angular/cli && npm install 
 
-
+# Server 
 # Install app dependencies
 FROM node:latest
 WORKDIR /root/
