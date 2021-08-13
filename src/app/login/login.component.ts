@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('isLoggedIn', "true");
           localStorage.setItem('user', this.user.username);
           alert('You are logged in :)');
-          this._router.navigate(['/dashboard']);
+          this._router.navigate(['/home']);
         }
       }
     })
