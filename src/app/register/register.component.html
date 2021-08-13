@@ -8,29 +8,33 @@
 		<div class="row">
 			<div class="panel panel-primary">
 				<div class="panel-body">
-					<form action="#" role="form" class="register_form">
+					<form class="register_form">
 						<div class="form-group">
 							<h2>Create account</h2>
 						</div>
                         <hr class="colorgraph"> 
 						<div class="form-group">
 							<label class="control-label" for="signupName">Username</label>
-							<input id="signupName" type="text" maxlength="50" class="form-control">
+<!-- 							<input id="signupName" type="text" maxlength="50" class="form-control" [(ngModel)]="user.username" />
+ -->						    <input type="text" class="form-control" name="username" id="username" [(ngModel)]="user.username" />
 						</div>
 						<div class="form-group">
 							<label class="control-label" for="signupEmail">Email</label>
-							<input id="signupEmail" type="email" maxlength="50" class="form-control">
+							<!-- <input id="signupEmail" type="email" maxlength="50" class="form-control" [(ngModel)]="user.email" /> -->
+						    <input type="email" class="form-control" name="email" id="email"  [(ngModel)]="user.email" />
 						</div>
 						<div class="form-group">
 							<label class="control-label" for="signupPassword">Password</label>
-							<input id="signupPassword" type="password" maxlength="25" class="form-control" placeholder="at least 6 characters" length="40">
-						</div>
+<!-- 							<input id="signupPassword" type="password" maxlength="25" class="form-control" placeholder="at least 6 characters" [(ngModel)]="user.password" length="40" />
+ -->
+                            <input type="password" class="form-control" name="password" id="password" [(ngModel)]="user.password" />
+        				</div>
 						<!-- <div class="form-group">
 							<label class="control-label" for="signupConfirmPassword">Confirm Password</label>
 							<input id="signupConfirmPassword" type="password" maxlength="25" class="form-control">
 						</div> -->
 						<div class="form-group">
-							<button id="signupSubmit" type="submit" class="btn btn-info btn-block">Create your account</button>
+							<button id="signupSubmit" type="submit" (click)="registerNewUser()" class="btn btn-info btn-block">Create</button>
 						</div>
 						<p class="form-group">By creating an account, you agree to our <a href="#">Terms of Use</a> and our <a href="#">Privacy Policy</a>.</p>
 						<hr class="colorgraph">
@@ -40,3 +44,33 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- <form class="register_form">
+		<div class="form-group">
+			<h2>Create account</h2>
+		</div>
+		<hr class="colorgraph"> 
+		<div class="form-group">
+			<label class="control-label" for="signupName">Username</label>
+			<input id="signupName" type="text" maxlength="50" class="form-control">
+		</div>
+		<div class="form-group">
+			<label class="control-label" for="signupEmail">Email</label>
+			<input id="signupEmail" type="email" maxlength="50" class="form-control">
+		</div>
+		<div class="form-group">
+			<label class="control-label" for="signupPassword">Password</label>
+			<input id="signupPassword" type="password" maxlength="25" class="form-control" placeholder="at least 6 characters" length="40">
+		</div>
+		 <div class="form-group">
+			<label class="control-label" for="signupConfirmPassword">Confirm Password</label>
+			<input id="signupConfirmPassword" type="password" maxlength="25" class="form-control">
+		</div> 
+		<div class="form-group">
+			<button id="signupSubmit" type="submit" class="btn btn-info btn-block">Create your account</button>
+		</div>
+		<p class="form-group">By creating an account, you agree to our <a href="#">Terms of Use</a> and our <a href="#">Privacy Policy</a>.</p>
+		<hr class="colorgraph">
+		<p>Already have an account? <a routerLink='/login'>Sign in</a></p>
+	</form>
+ -->
