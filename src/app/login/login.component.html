@@ -9,11 +9,27 @@
 		    <h3 class="form-signin-heading">Admin Sign In</h3>
 			  <hr class="colorgraph"><br>
 			  
-			  <input type="text" class="form-control" name="Username" placeholder="Username" required="" autofocus="" />
+			  <input type="text" class="form-control" name="Username" placeholder="Username"  required="" autofocus="" />
 			  <input type="password" class="form-control" name="Password" placeholder="Password" required=""/>     		  
 			 
 			  <button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit">Login</button>  			
 		</form>			
 	</div>
 </div>
-   
+
+
+<!-- 
+<form>
+    <img src="./assets/images/logo2.png" alt="My logo image" class="my-logo" style="width: 85px;height: 85px;"/> <br> <br> 
+    <h2>Login</h2> <br>
+    <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" class="form-control" name="username" id="username" [(ngModel)]="user.username" />
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" name="password" id="password" [(ngModel)]="user.password" />
+    </div> <br/>
+    <button type="submit" class="btn btn-secondary" (click)="login()">Login</button>
+</form>
+    -->

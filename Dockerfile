@@ -16,8 +16,8 @@ COPY package*.json ./
 RUN npm install
 COPY server.js .
 
-# app binds to port 3000
-EXPOSE 3000
+# app binds to port 8000
+EXPOSE 8000
 
 # CMD [ "node", 'server.js' ]
 CMD ng server --host 0.0.0.0

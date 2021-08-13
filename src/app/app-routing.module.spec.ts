@@ -2,7 +2,7 @@ import { Location } from "@angular/common";
 import { fakeAsync, TestBed } from "@angular/core/testing";
 import { Router } from "@angular/router";
 import { RouterTestingModule } from "@angular/router/testing";
-import { AppRoutingModule, routes } from "./app-routing.module";
+import { applicationRoutes } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { LoginComponent } from "./login/login.component";
@@ -17,7 +17,7 @@ describe ('Router: App', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
             declarations: [ DashboardComponent, LoginComponent, RegisterComponent, AppComponent ],
-            imports: [RouterTestingModule.withRoutes(routes)]
+            imports: [RouterTestingModule.withRoutes(applicationRoutes)]
         })
         router = TestBed.inject(Router);
         location = TestBed.inject(Location);
