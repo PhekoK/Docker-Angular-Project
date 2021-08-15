@@ -1,7 +1,93 @@
-<div>
-    <div>
-        <div>
-            <p>Users Work</p>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<body>
+<header>
+  <div class="container bg-info p-5 ">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#" routerLink='/home'>Home</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+<!--           <a class="nav-item nav-link active" routerLink='/dashboard'>Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" routerLink='/register'>Register</a>
+          <a class="nav-item nav-link" routerLink='/login'>Login</a> -->   
+          <a class="nav-item nav-link" routerLink='/users'>Manage Users</a>
         </div>
+      </div>
+      <div class="text-end" *ngIf="loggedIn">
+        <a (click)="logout()" class="btn btn-outline-dark me-2" href="#">Sign Out</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<!---->
+<main>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <section>
+  <div class="container">
+  
+    <div class="card">
+        <button id="add__new__list" type="button" class="btn btn-success position-absolute" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fas fa-plus"></i> Add a new List</button>
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">List Name</th>
+                <th scope="col">Deadline</th>
+                <th scope="col">Edit List </th>
+                <th scope="col">list info</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>
+                    <a class="btn btn-sm btn-primary" href="#"><i class="far fa-edit"></i> edit</a>
+                    <a class="btn btn-sm btn-danger" href="#"><i class="fas fa-trash-alt"></i> delete</a>    
+                </td>
+                <td><a class="btn btn-sm btn-info" href="#"><i class="fas fa-info-circle"></i> Details</a> </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>
+                    <a class="btn btn-sm btn-primary" href="#"><i class="far fa-edit"></i> edit</a>
+                    <a class="btn btn-sm btn-danger" href="#"><i class="fas fa-trash-alt"></i> delete</a>    
+                </td>
+                <td><a class="btn btn-sm btn-info" href="#"><i class="fas fa-info-circle"></i> Details</a> </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>       
+                    <a class="btn btn-sm btn-primary" href="#"><i class="far fa-edit"></i> edit</a>
+                    <a class="btn btn-sm btn-danger" href="#"><i class="fas fa-trash-alt"></i> delete</a> 
+                </td>
+                <td><a class="btn btn-sm btn-info" href="#"><i class="fas fa-info-circle"></i> Details</a> </td>
+              </tr>
+            </tbody>
+          </table>
     </div>
-</div>
+  
+  </div>
+  
+  </section>
+</main>
+<!---->
+
+<!---->
+<footer >
+  <div class="container bg-info p-5">
+
+	</div>
+</footer>
+</body>
