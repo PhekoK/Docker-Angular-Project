@@ -1,17 +1,11 @@
-FROM node:14.17.5-alpine AS build
+FROM node:14.17.0-alpine as build-step
+RUN mkdir -p /app
+WORKDIR /app
+COPY package.json /app
+RUN npm install
+COPY . /app
+RUN npm run build --prod
 
-WORKDIR /usr/src/app
-
-COPY package.json package-lock.json ./
-
-RUN npm install -g && \
-     npm install
-
-COPY . .
-
-RUN npm run build
-
-# stage 2
-FROM nginx:1.21-alpine
-COPY nginx.conf /etc/nginx/nginx.conf
-COPY --from=build /usr/src/app/dist/Docker-Angular-Project /usr/share/nginx/html/
+FROM nginx:1.20.1
+COPY --from=build-step /app/dist/Docker-Angular-Project /usr/share/nginx/html
+EXPOSE 4200:80
