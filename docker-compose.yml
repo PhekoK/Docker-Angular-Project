@@ -1,0 +1,7 @@
+version: "3.3"
+services:
+    phase4-angular-node-service:
+       container_name: Docker-Angular-Project
+       build: .
+       ports:
+           - "80:80"
